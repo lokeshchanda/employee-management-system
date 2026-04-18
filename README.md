@@ -1,14 +1,21 @@
 Employee Management System
+A full-stack web application to manage employee records.
 
-Built using Java Spring Boot, MySQL, HTML, CSS and JavaScript.
+Technologies Used
+
+- Java
+- Spring Boot
+- MySQL
+- HTML
+- CSS
+- JavaScript
 
 Features
 
-- Login / Logout
-- Add Employee
-- Update Employee
-- Delete Employee
-- Search Employee
+- Secure Login / Logout
+- Add, Update, Delete Employees
+- Search Employees
+- Responsive Dashboard UI
 
 Author
 Lokesh
