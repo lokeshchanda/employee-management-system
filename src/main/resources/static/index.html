@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Management System</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("loggedIn") !== "true"){
+    window.location.href = "login.html";
+}
+</script>
+
+<div class="container">
+
+<header class="hero">
+
+<div>
+<p class="tag">Employee Dashboard</p>
+
+<h1>Employee Management System</h1>
+
+<p class="sub">
+Manage employee details, departments, salaries and records in one place.
+</p>
+</div>
+
+<div class="hero-right">
+
+<input type="text"
+id="searchInput"
+placeholder="Search employee..."
+onkeyup="loadEmployees()">
+
+<br><br>
+
+<button class="primary" onclick="exportCSV()">Export Data</button>
+<button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
+
+</header>
+
+<section class="stats">
+
+<div class="card">
+<span>Total Employees</span>
+<h2 id="totalCount">0</h2>
+</div>
+
+<div class="card">
+<span>Active Records</span>
+<h2>Available</h2>
+</div>
+
+<div class="card">
+<span>Database Status</span>
+<h2>Connected</h2>
+</div>
+
+</section>
+
+<section class="panel">
+
+<h3>Employee Details</h3>
+
+<div class="form-grid">
+
+<input type="text"
+id="name"
+placeholder="Enter employee name">
+
+<input type="email"
+id="email"
+placeholder="Enter employee email">
+
+<input type="text"
+id="department"
+placeholder="Enter department">
+
+<input type="number"
+id="salary"
+placeholder="Enter salary">
+
+</div>
+
+<div class="btn-row">
+
+<button class="primary"
+onclick="addEmployee()">
+Add Employee
+</button>
+
+<button class="secondary"
+onclick="updateEmployee()">
+Update Employee
+</button>
+
+</div>
+
+</section>
+
+<section class="table-box">
+
+<div class="table-top">
+<h3>Employee List</h3>
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Department</th>
+<th>Salary</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="employeeTable"></tbody>
+
+</table>
+
+</section>
+
+</div>
+
+<!-- Toast Message -->
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
