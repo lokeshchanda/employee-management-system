@@ -1,4 +1,6 @@
 Employee Management System
+![Dashboard](dashboard.png)
+
 A full-stack web application to manage employee records.
 
 Technologies Used
@@ -18,4 +20,5 @@ Features
 - Responsive Dashboard UI
 
 Author
+
 Lokesh
