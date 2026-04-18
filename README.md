@@ -1,5 +1,5 @@
 Employee Management System
-![Dashboard](dashboard.png)
+![Dashboard](Main_Dashboard_.png)
 
 A full-stack web application to manage employee records.
 
